@@ -6,7 +6,6 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import java.time.Instant;
 
-//Represents a user in the expense tracker application. This entity maps to the users table in the database.
 @Data
 @Entity
 @Table(name = "users")
@@ -24,7 +23,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column(name = "phone_number", nullable = false, length = 15)
     private String phoneNumber;
 
     @Enumerated(EnumType.STRING)
